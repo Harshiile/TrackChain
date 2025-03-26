@@ -1,0 +1,22 @@
+// schema.prisma
+
+generator client {
+    provider = "prisma-client-js"
+}
+
+datasource db {
+    provider  = "postgresql"
+    url       = env("POSTGRES_PRISMA_URL") // uses connection pooling
+    directUrl = env("POSTGRES_PRISMA_URL") // uses a direct connection
+}
+
+model WorkPlace {
+    id                  String  @id @default(cuid())
+    userId              String
+    name                String  @unique
+    startFrom           String
+    emailTime           Int
+    attendanceType      Int
+    thresholdAttendance Decimal
+    visibility          Boolean
+}

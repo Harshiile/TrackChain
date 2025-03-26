@@ -1,0 +1,24 @@
+###
+GET http://localhost:3000/api/get
+
+###
+POST http://localhost:3000/api/mail/send
+Content-Type: application/json
+
+{
+    "email":"cclab01234@gmail.com"
+}
+
+###
+POST http://localhost:3000/api/workspace/add
+Content-Type: application/json
+
+{
+    "userId":"user_2uqkZflhPCeO8LA0fEfL05Sp9em",
+    "name":"School",
+    "startFrom":"1743001674688",
+    "emailTime":540,
+    "attendanceType":1,
+    "thresholdAttendance":16,
+    "visibility":false
+}
