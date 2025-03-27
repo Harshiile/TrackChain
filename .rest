@@ -1,21 +1,19 @@
-###
-GET http://localhost:3000/api/get
-
-###
-POST http://localhost:3000/api/mail/send
+### Getting all WSs
+POST http://localhost:3000/api/fetch
 Content-Type: application/json
 
 {
-    "email":"cclab01234@gmail.com"
+    "res":"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRlIjoxNzQzMDQzMTg2NjE2LCJ3c0lkIjoiY204cXBqcHR0MDAwMTQ1cDE1cmcyaTB1MyIsInJlc3BvbnNlIjp0cnVlLCJpYXQiOjE3NDMwNDMxODZ9._G5DabhAeOxgSEUP_hLpHW6XcxvUbilQYuqG9s29EnI"
 }
 
-###
-POST http://localhost:3000/api/workspace/add
+
+### Create WS
+POST http://localhost:3000/api/workspace
 Content-Type: application/json
 
 {
     "userId":"user_2uqkZflhPCeO8LA0fEfL05Sp9em",
-    "name":"School",
+    "name":"College",
     "startFrom":"1743001674688",
     "emailTime":540,
     "attendanceType":1,
